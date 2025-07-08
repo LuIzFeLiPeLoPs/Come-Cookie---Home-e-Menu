@@ -1,0 +1,197 @@
+:root {
+    --main-color: #2f0e00;
+    --bege: #de9742;
+    --yellow: #ffdb20;
+    --bg: #2f0e00;
+    --border: 0.1rem solid rgb(255, 255, 255);
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.3s linear;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-bottom: var(--border);
+    background-color: var(--bg);
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+}
+
+.navbar a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.navbar a:hover {
+    color: var(--bege);
+    border-bottom: 0.1rem solid var(--bege);
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.icons img {
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.icons img:hover {
+    width: 40px;
+    height: 40px;
+}
+
+.btn {
+    background: var(--bege);
+    color: #fff;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.btn:hover {
+    letter-spacing: 0.1rem;
+} 
+
+
+.item-active {
+    height: 100vh;
+
+}
+
+@keyframes toactive {
+    from {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+.item-active .chips {
+    z-index: 2;
+    position: absolute;
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top: 8rem;
+    animation: toactive 1s ease-in-out;
+    opacity: 0;
+    transition: opacity 1s ease;
+
+}
+
+.item-active .cookieshome {
+    display: none;
+    z-index: 3;
+    position: absolute;
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top: 8rem;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.home-container {
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.home-container section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.content {
+    max-width: 60rem;
+    z-index: 4;
+    position: absolute;
+}
+
+.content h2 {
+    color: #fff;
+    font-size: 6rem;
+}
+
+
+.texto-escondido {
+    color: #de9742;
+    font-size: 7rem;
+}
+
+.title {
+    font-size: 5rem;
+    color: var(--bege);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.box-container .box {
+    text-align: center;
+    border: var(--border);
+    padding: 5rem;
+    cursor: pointer;
+}
+
+
+.box-container .box img {
+    height: 10rem;
+}
+
+.box-container .box h3 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.box-container .box .price {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 0.5rem;   
+}
+
+.box-container .box:hover {
+    background-color: #fff;
+}
+
+.box-container .box:hover>* {
+    color: var(--main-color);
+}
